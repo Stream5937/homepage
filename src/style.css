@@ -1,0 +1,133 @@
+/*css template with minimal reset by Digital Ocean */
+/* reset notes
+
+    images are responsive by default.
+    important part of this CSS reset is the box-sizing: border-box,
+    this will ensure consistent and predictable sizing. 
+    The default value of content-box doesn’t account for the padding or border.
+    Remove the rule for ol and ul to keep the default bullet points for lists.
+    With font-weight: normal headings won’t be bolded by default.
+    default font size is 16px. 
+    Everything else can be specified in rem units and it will be based 16px. 
+    Adjust globally to make the text a little larger overall:- change the base rule for something like 17 or 18px say.
+*/
+
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*------------------------------------------------------------*/
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  min-width: 100vw;
+  height: auto;
+  min-height: 500px;
+  background-color: bisque;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+#container {
+  display:grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  min-height: 500px;
+  min-width: vw;
+  overflow: hidden; 
+  background-color:rgb(100, 150, 200);
+  z-index: 0;
+}
+
+#container:before { 
+  display:grid;
+  grid-area: 1/1/2/3;
+  content: 'xyz';
+  position: absolute;
+  left: 0%;
+  width: 110%; 
+  height: 100%; 
+  background-color: rgb(255, 255, 255); /* fallback */
+ /* background-color: rgba(255, 255, 255, 0.3); */
+  top: 50%;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+   z-index: 0;
+}
+
+
+.picContainer {
+  display:grid;
+  grid-area: 0/1/1/2;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+  max-height: 480px;
+  min-height: 450px;
+  min-width: 400px;
+  max-width: 450px;
+  background-color: white;
+   z-index: 10;
+}
+
+.imageContainer {
+  max-height: 480px;
+  min-height: 450px;
+  min-width: 400px;
+  max-width: 450px;
+  background-image: url("../assets/oldGuy.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0inherit;
+}
+
+.attribution {
+  padding-left : 15%;
+}
+
+.mainContainer {
+  display:grid;
+  min-height: 80vh;
+  background-color: aliceblue;
+}
+
+
+footer {
+  min-width: 100vw;
+  height: auto;
+  min-height: 100px;
+  background-color: bisque;
+}
