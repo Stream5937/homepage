@@ -48,7 +48,7 @@ header {
   min-height: 500px;
   background-color: bisque;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
   align-content: center;
@@ -56,8 +56,8 @@ header {
 
 #container {
   display:grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 1fr 1fr;
+  grid-area: 1/1/2/4;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
   align-content: center;
@@ -71,7 +71,7 @@ header {
 
 #container:before { 
   display:grid;
-  grid-area: 1/1/2/3;
+  grid-area: 1/1/2/4;
   content: 'xyz';
   position: absolute;
   left: 0%;
@@ -87,12 +87,12 @@ header {
 }
 
 
-.picContainer {
+.picContainer_1 {
   display:grid;
-  grid-area: 0/1/1/2;
+  grid-area: 1/1/2/2;
   justify-content: center;
   align-content: center;
-  justify-self: center;
+  justify-self: right;
   align-self: center;
   max-height: 480px;
   min-height: 450px;
@@ -102,7 +102,7 @@ header {
    z-index: 10;
 }
 
-.imageContainer {
+.imageContainer_1{
   max-height: 480px;
   min-height: 450px;
   min-width: 400px;
@@ -110,11 +110,42 @@ header {
   background-image: url("../assets/oldGuy.jpg");
   background-size: cover;
   background-position: center;
-  z-index: 0inherit;
+  z-index: inherit;
+}
+
+.textOverlay {
+  position: relative;
+  margin-top: 90%;
+ font-size: 2rem;
+ color:blue;
 }
 
 .attribution {
   padding-left : 15%;
+}
+
+.textContainer {  
+  display:grid;
+  grid-area: 1/2/2/4;
+  justify-content: center;
+  align-content: center;
+  justify-self: left;
+  align-self: center;
+  max-height: 400px;
+  min-height: 350px;
+  min-width: 800px;
+  max-width: 850px;
+  background-color: white;
+  z-index: 10 ;
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.textLayout {
+  padding-left: 40px;
+  padding-right: 40px;
+
 }
 
 main {
@@ -128,7 +159,7 @@ main {
   grid-area: 1/1/2/2;
   min-height: 80%;    /*80vh;*/
   min-width: 100%;
-  background-color: aliceblue;
+  background-color: white;
 }
 
 ul {
@@ -140,11 +171,13 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     height: 100%;
     width: 95%;
-    background-color: aqua;
+    background-color:white;
     padding-top: 80px;
+    /*
     border-color: blue;
     border-width: 2px;
     border-style: solid;
+    */
 }
 
 li {
@@ -172,6 +205,61 @@ li>p.head {
 footer {
   min-width: 100vw;
   height: auto;
-  min-height: 100px;
-  background-color: bisque;
+  min-height: 600px;
+  background-color:rgb(100, 150, 200);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.textContainer-1{  
+  display:grid;
+  grid-area: 1/1/2/2;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+  max-height: 400px;
+  min-height: 350px;
+  min-width: 800px;
+  max-width: 850px;
+  background-color: white;
+  z-index: 10 ;
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.textLayout-1 {
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+
+.picContainer_2 {
+  display:grid;
+  grid-area: 1/2/2/3;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+  max-height: 550px;
+  min-height: 450px;
+  min-width: 600px;
+  max-width: 750px;
+  background-color: white;
+   z-index: 10;
+}
+
+.imageContainer_2{
+  max-height: 550px;
+  min-height: 450px;
+  min-width: 600px;
+  max-width: 750px;
+  background-image: url("../assets/oldGuy-1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: inherit;
 }
