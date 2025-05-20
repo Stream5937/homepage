@@ -12,7 +12,6 @@
     Adjust globally to make the text a little larger overall:- change the base rule for something like 17 or 18px say.
 */
 
-
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -118,10 +117,55 @@ header {
   padding-left : 15%;
 }
 
-.mainContainer {
-  display:grid;
-  min-height: 80vh;
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.projects {
+  display: grid;
+  grid-area: 1/1/2/2;
+  min-height: 80%;    /*80vh;*/
+  min-width: 100%;
   background-color: aliceblue;
+}
+
+ul {
+    display:grid;
+    resize: both;
+    justify-self: center;
+    overflow: auto;
+    grid-template-rows: repeat(2  minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    height: 100%;
+    width: 95%;
+    background-color: aqua;
+    padding-top: 80px;
+    border-color: blue;
+    border-width: 2px;
+    border-style: solid;
+}
+
+li {
+    grid-template-rows: repeat(5, 1fr) ;
+    grid-template-columns: 1fr ;
+    max-height: 600px;
+    min-height: 500px;
+    max-width: 450px;
+    background-color: yellow;
+    margin: 80px;
+    padding: 15px;
+    border:aqua;
+    border-radius: 10px;
+    color:blue;
+    gap: 50px;
+}
+
+li>p.head {
+    grid-area: 1/1/2/3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 
