@@ -116,11 +116,11 @@ header {
 .textOverlay {
   position: relative;
   margin-top: 90%;
- font-size: 2rem;
- color:blue;
+  font-size: 2rem;
+  color:blue;
 }
 
-.attribution {
+.picContainer_1 > .attribution {
   padding-left : 15%;
 }
 
@@ -145,7 +145,16 @@ header {
 .textLayout {
   padding-left: 40px;
   padding-right: 40px;
+  font-size:x-large;
+}
 
+.textLayout > h1 {
+  font-size:xx-large;
+  font-weight: 800;
+}
+
+.textLayout > span {
+  margin-left: 70%;
 }
 
 main {
@@ -162,6 +171,7 @@ main {
   background-color: white;
 }
 
+
 ul {
     display:grid;
     resize: both;
@@ -173,11 +183,21 @@ ul {
     width: 95%;
     background-color:white;
     padding-top: 80px;
-    /*
     border-color: blue;
     border-width: 2px;
     border-style: solid;
-    */
+    
+}
+
+.textOverlay-1 {
+  width:100%;
+  position: relative;
+  top:0;
+  left:0;
+  grid-area: 1/1/2/2;
+  margin-top: -30%;
+  font-size: 2rem;
+  color:blue;
 }
 
 li {
@@ -208,35 +228,58 @@ footer {
   min-height: 600px;
   background-color:rgb(100, 150, 200);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
   grid-template-rows: 1fr;
   justify-content: center;
   align-content: center;
 }
 
-.textContainer-1{  
+.textContainer-1 {  
   display:grid;
   grid-area: 1/1/2/2;
   justify-content: center;
   align-content: center;
   justify-self: center;
   align-self: center;
-  max-height: 400px;
-  min-height: 350px;
-  min-width: 800px;
+  max-height: 580px;
+  min-height: 550px;
+  min-width: 650px;
   max-width: 850px;
-  background-color: white;
+  background-color:rgb(100, 150, 200);
+  color: white;
   z-index: 10 ;
+  /*
   border-color: blue;
   border-width: 2px;
   border-style: solid;
+  */
+  margin-left: 20px;
 }
 
+.textContainer-1 > h1,
 .textLayout-1 {
   padding-left: 40px;
   padding-right: 40px;
 
 }
+
+.textContainer-1 > h1 {
+  font-size:xx-large;
+  font-weight: 800;
+}
+
+.textLayout-1 {
+  font-size:x-large;
+  background-color:rgb(100, 150, 200);
+  color: white;
+}
+
+.textLayout > i,
+.textLayout-1 > i {
+  color:black;
+  margin : 15px;
+}
+
 
 .picContainer_2 {
   display:grid;
@@ -246,20 +289,25 @@ footer {
   justify-self: center;
   align-self: center;
   max-height: 550px;
-  min-height: 450px;
-  min-width: 600px;
-  max-width: 750px;
+  min-height: 500px;
+  min-width: 800px;
+  max-width: 850px;
   background-color: white;
    z-index: 10;
 }
 
-.imageContainer_2{
+.imageContainer_2 {
   max-height: 550px;
-  min-height: 450px;
-  min-width: 600px;
-  max-width: 750px;
+  min-height: 500px;
+  min-width: 800px;
+  max-width: 850px;
   background-image: url("../assets/oldGuy-1.jpg");
   background-size: cover;
   background-position: center;
   z-index: inherit;
+}
+
+.picContainer_2 > .attribution {
+  padding-left : 25%;
+  background-color:rgb(100, 150, 200);
 }
