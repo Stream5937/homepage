@@ -15,6 +15,8 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
 }
 
 *, *:before, *:after {
@@ -113,11 +115,12 @@ header {
   z-index: inherit;
 }
 
-.textOverlay {
+.textOverlay_1 {
   position: relative;
   margin-top: 90%;
   font-size: 2rem;
-  color:blue;
+  color:yellow;
+  opacity:100;
 }
 
 .picContainer_1 > .attribution {
@@ -143,31 +146,62 @@ header {
 }
 
 .textLayout {
+  margin: 0;
   padding-left: 40px;
   padding-right: 40px;
   font-size:x-large;
 }
+
+.textOverlay_2 {
+  /*
+      position: relative;
+      margin-top: 11%;
+      margin-left: 100%;
+      font-size: 2rem;
+      */
+      opacity: 0;
+  }
+
 
 .textLayout > h1 {
   font-size:xx-large;
   font-weight: 800;
 }
 
-.textLayout > span {
-  margin-left: 70%;
+/* -----------------temp ---------*/
+
+.viewDims {
+  color: red;
+  background-color: aqua;
+  max-width: fit-content;
+  max-height: fit-content;
 }
+
+.textLayout > span {
+  margin-left: 5%;
+}
+
+.textLayout > br,
+.textLayout > br > span {
+  margin-left: 5px;
+}
+
+/* -----------------temp ---------*/
+
+
 
 main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  justify-content: center;
 }
 
 .projects {
   display: grid;
   grid-area: 1/1/2/2;
-  min-height: 80%;    /*80vh;*/
-  min-width: 100%;
+  min-height: auto;    /*80vh;*/
+  min-width: 500px;
   background-color: white;
 }
 
@@ -183,43 +217,115 @@ ul {
     width: 95%;
     background-color:white;
     padding-top: 80px;
-    border-color: blue;
+    /*
+    border-color:blue;
     border-width: 2px;
     border-style: solid;
+    */
     
 }
 
-.textOverlay-1 {
+.textOverlay_3 {
   width:100%;
   position: relative;
   top:0;
   left:0;
   grid-area: 1/1/2/2;
-  margin-top: -30%;
+  margin-top: -20%;
   font-size: 2rem;
   color:blue;
 }
 
 li {
-    grid-template-rows: repeat(5, 1fr) ;
+    display:grid;
+    grid-template-rows: repeat(3, 1fr) ;
     grid-template-columns: 1fr ;
     max-height: 600px;
     min-height: 500px;
-    max-width: 450px;
-    background-color: yellow;
-    margin: 80px;
-    padding: 15px;
-    border:aqua;
+    max-width: 480px;
+    background-color:white;
+    margin: 50px;
+    box-shadow: 10px 10px lightgrey; 
+   /* */
+  /*  border:aqua; 
     border-radius: 10px;
     color:blue;
     gap: 50px;
+ /*   */
 }
 
-li>p.head {
-    grid-area: 1/1/2/3;
-    grid-template-rows: 1fr;
-    grid-template-columns: 2fr 1fr;
+li > .screenshot {
+    display: grid;
+    grid-area: 1/1/3/2;
+    background-color: aqua;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* 
+    border:blue;
+    border-style: solid;
+    border-radius: 10px;
+   /* */
 }
+
+li > .description {
+    display: grid;
+    align-content: center;
+    grid-area: 3/1/4/2;
+    background-color:white;
+    min-width: 100%;
+    min-height: 100%;
+   /* border:blue;
+    border-style: solid;
+    border-radius: 10px; */
+    
+    font-size: 2rem;
+    padding : 15px;
+}
+
+#imgA {
+  background-image: url("../assets/weather-forecast.png");
+}
+
+#imgB {
+  background-image: url("../assets/library.png");
+}
+
+#imgC {
+  background-image: url("../assets/etch-A-sketch.png");
+}
+
+#imgD {
+  background-image: url("../assets/tic-tac-toe.png");
+}
+
+#imgE {
+ /* background-image: url("../assets/rock-paper-scissors.png"); */
+  background-image: url("../assets/calculator.png");
+}
+
+#imgF {
+  background-image: url("../assets/battleships.png");
+}
+
+span > i > img {
+  width: 20px;
+  height: 20px;
+}
+
+.description > span {
+  margin-left: 70%;
+}
+
+.iconMedium {
+  font-size: 2rem;
+  /*
+  margin-top: 5px;
+  padding: 10px 5px 0px 5px;
+  */
+}
+
 
 
 footer {
