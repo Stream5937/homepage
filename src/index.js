@@ -3,8 +3,6 @@ import "./mediaStyles.css";
 
 let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-//document.getElementById("vpWidth").textContent = vw;
-//document.getElementById("vpHeight").textContent = vh;
 console.log('vw ',vw,' vh ',vh);
 
 let body = document.querySelector('.body');
@@ -21,17 +19,12 @@ if(vw > 1201){
 visualViewport.onresize = () =>{
   vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
   vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
- // document.getElementById("vpWidth").textContent = vw;
- // document.getElementById("vpHeight").textContent = vh;
-  // console.log('vw ',vw,' vh ',vh);
   const txt =  document.querySelector(".textLayout");
   let txtOverlay =  document.querySelector(".textOverlay_2");
 
  if(vw > 1201){
     pageReload = true;
-    
     txt.style.marginLeft = 0;
-   // txt.style.marginLeft = 300;
     lastVW = vw;
 
 }else{
@@ -65,46 +58,9 @@ visualViewport.onresize = () =>{
 
          if(resize_up_actioned){
                         resize_up_actioned = false;
-                        //force page refresh once
-                        //location.reload();
-                        //lastVW = vw
         } 
     }
 
-   /* 
-    //refresh page once when resizing up above 1200px
-    if(vw > 1200) {
-        if(!pageReload) {
-            //now resizing up
-            if(!resize_up_actioned){
-                if ( vw > lastVW){
-                    //log started resizing up
-                    resize_up_actioned = true;
-                    //force page refresh once
-                    location.reload();
-                    pageReload = true;
-                    //lastVW = vw;
-                }
-            }
-        }
-        console.log('pageReload: ',pageReload, 'resize_up_actioned: ',resize_up_actioned);
-    }
-    /*  
-        //now resizing down
-        if(vw < 1200) {
-            if ( vw < lastVW){
-                    //log started resizing dn
-                    if(resize_up_actioned){
-                        resize_up_actioned = false;
-                        //force page refresh once
-                        //location.reload();
-                        //lastVW = vw
-                    }        
-                }
-
-            lastVW = vw;
-        }
-    */
 }
 
 }
