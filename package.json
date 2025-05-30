@@ -1,15 +1,19 @@
 {
   "name": "homepage",
   "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/Stream5937/homepage.git"
+  },
   "description": "A sample projects homepage",
   "private": "true",
-  "main": "index.js",
+  "main": "./src/index.js",
   "type": "module",
   "scripts": {
     "build": "webpack",
     "build-dev": "webpack --config webpack.config.dev.cjs",
     "start": "webpack-dev-server --config=webpack.config.dev.cjs --open",
-    "test": "jest"
+    "test": "jest",
+    "watch": "webpack --watch"
   },
   "keywords": [
     "webpack"
@@ -32,9 +36,10 @@
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.11.0",
-    "html-webpack-plugin": "^5.5.3",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "style-loader": "^3.3.4",
+    "style-loader": "^4.0.0",
     "webpack-dev-server": "^5.2.0",
     "webpack-merge": "^6.0.1"
   }

@@ -235,6 +235,10 @@ li > .description {
     padding : 15px;
 }
 
+#pop-ups {
+  font-size: 1rem;
+}
+
 #imgA {
   background-image: url("../assets/weather-forecast.png");
 }
